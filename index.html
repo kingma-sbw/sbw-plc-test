@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="/assets/api.js" defer></script>
+  <title>api-test</title>
+</head>
+<body>
+  <div id="app">
+    <h1>api-test</h1>
+    <select v-model="studentId" v-on:change="studentSelect">
+      <option v-for="student in students" :value="student.id">{{ student.fullname }}</option>
+    </select>
+  </div>
+</body>
+</html>
